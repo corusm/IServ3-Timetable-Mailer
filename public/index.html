@@ -1,0 +1,225 @@
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Timetable</title>
+
+    <!-- CSS -->
+    <style>
+
+        .myForm {
+                                font - family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                            font-size: 0.8em;
+                            width: 30em;
+                            padding: 1em;
+                        }
+                
+        .myForm * {
+                                box - sizing: border-box;
+                        }
+                
+        strong {
+                                padding: 0;
+                            font-weight: bold;
+                            text-align: center;
+                            display: block;
+                        }
+        .myForm label {
+                                padding: 0;
+                            font-weight: bold;
+                            text-align: right;
+                            display: block;
+                        }
+                
+                        .myForm input,
+                        .myForm select,
+        .myForm textarea {
+                                margin - left: 2em;
+                            float: right;
+                            width: 20em;
+                            border: 1px solid #ccc;
+                            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                            font-size: 0.9em;
+                            padding: 0.3em;
+                        }
+                
+        .myForm textarea {
+                                height: 100px;
+                        }
+                
+        .myForm button {
+                                padding: 1em;
+                            border-radius: 0.5em;
+                            background: #eee;
+                            border: none;
+                            font-weight: bold;
+                            margin-left: 14em;
+                            margin-top: 1.8em;
+                        }
+                
+        .myForm button:hover {
+                                background: #ccc;
+                            cursor: pointer;
+                            }
+</style>
+
+</head>
+
+<body>
+
+    <form class="myForm" method="post" action="/timetableentry">
+
+        <h1>Timetable Form <br /> Nur fuer JG. 13</h1>
+        <p>Kuerzel der Lehrer in die jeweilige Stunde eintragen (3 Buchstaben). <b>Fuer Freistunde 333 einsetzen.</b></p>
+        <p>Die Email wird jeden Tag, wenn der Plan veroeffentlicht wird und um 18:00 Uhr gefired.</p>
+        <p><b>Bitte beachten:</b> Jeder nutzer kann sich nur einmal registrieren. Also bitte gleich richtig eintragen
+            oder mail an mich.</p>
+        <p>Support: dev@corusm.de</p><br />
+        <p>
+            <label>Vorname
+                <input type="text" name="name" required>
+            </label>
+        </p>
+
+        <p>
+            <label>Email
+                <input type="email" name="email" required>
+            </label>
+        </p>
+        <br />
+        <strong><u>Montag</u>
+            <p>
+                <label>1. Stunde
+                    <input type="text" name="m1" onkeyup="this.value = this.value.toUpperCase();" required>
+                </label>
+            </p>
+
+            <p>
+                <label>3. Stunde
+                    <input type="text" name="m3" onkeyup="this.value = this.value.toUpperCase();" required>
+                </label>
+            </p>
+
+            <p>
+                <label>5. Stunde
+                    <input type="text" name="m5" onkeyup="this.value = this.value.toUpperCase();" required>
+                </label>
+            </p>
+
+            <p>
+                <label>8. Stunde
+                    <input type="text" name="m8" onkeyup="this.value = this.value.toUpperCase();" required>
+                </label>
+            </p>
+
+            <strong><u>Dienstag</u>
+                <p>
+                    <label>1. Stunde
+                        <input type="text" name="d1" onkeyup="this.value = this.value.toUpperCase();" required>
+                    </label>
+                </p>
+
+                <p>
+                    <label>3. Stunde
+                        <input type="text" name="d3" onkeyup="this.value = this.value.toUpperCase();" required>
+                    </label>
+                </p>
+
+                <p>
+                    <label>5. Stunde
+                        <input type="text" name="d5" onkeyup="this.value = this.value.toUpperCase();" required>
+                    </label>
+                </p>
+
+                <p>
+                    <label>8. Stunde
+                        <input type="text" name="d8" onkeyup="this.value = this.value.toUpperCase();" required>
+                    </label>
+                </p>
+
+                <strong><u>Mittwoch</u>
+                    <p>
+                        <label>1. Stunde
+                            <input type="text" name="i1" onkeyup="this.value = this.value.toUpperCase();" required>
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>3. Stunde
+                            <input type="text" name="i3" onkeyup="this.value = this.value.toUpperCase();" required>
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>5. Stunde
+                            <input type="text" name="i5" onkeyup="this.value = this.value.toUpperCase();" required>
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>8. Stunde
+                            <input type="text" name="i8" onkeyup="this.value = this.value.toUpperCase();" required>
+                        </label>
+                    </p>
+
+                    <strong><u>Donnerstag</u>
+                        <p>
+                            <label>1. Stunde
+                                <input type="text" name="o1" onkeyup="this.value = this.value.toUpperCase();" required>
+                            </label>
+                        </p>
+
+                        <p>
+                            <label>3. Stunde
+                                <input type="text" name="o3" onkeyup="this.value = this.value.toUpperCase();" required>
+                            </label>
+                        </p>
+
+                        <p>
+                            <label>5. Stunde
+                                <input type="text" name="o5" onkeyup="this.value = this.value.toUpperCase();" required>
+                            </label>
+                        </p>
+
+                        <p>
+                            <label>8. Stunde
+                                <input type="text" name="o8" onkeyup="this.value = this.value.toUpperCase();" required>
+                            </label>
+                        </p>
+
+                        <strong><u>Freitag</u>
+                            <p>
+                                <label>1. Stunde
+                                    <input type="text" name="f1" onkeyup="this.value = this.value.toUpperCase();"
+                                        required>
+                                </label>
+                            </p>
+
+                            <p>
+                                <label>3. Stunde
+                                    <input type="text" name="f3" onkeyup="this.value = this.value.toUpperCase();"
+                                        required>
+                                </label>
+                            </p>
+
+                            <p>
+                                <label>5. Stunde
+                                    <input type="text" name="f5" onkeyup="this.value = this.value.toUpperCase();"
+                                        required>
+                                </label>
+                            </p>
+
+                            <p>
+                                <label>8. Stunde
+                                    <input type="text" name="f8" onkeyup="this.value = this.value.toUpperCase();"
+                                        required>
+                                </label>
+                            </p>
+                            <p><button>Fertig</button></p>
+
+    </form>
+</body>
+
+</html>

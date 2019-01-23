@@ -1,0 +1,13 @@
+{
+    "user": "emailSMPTUser",
+    "password": "password",
+    "host": "smtpHost",
+    "ssl": false,
+    "schools": [
+        {
+            "usr": "iserv-username",
+            "psw": "secret",
+            "schoolDomain": "school-domain"
+        }
+    ]
+}
