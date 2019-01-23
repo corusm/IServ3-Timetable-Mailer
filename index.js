@@ -27,7 +27,7 @@ schedule.scheduleJob('1 18 * * 7', function () { // Mon-Fri 16:1
     startProcess();
 });
 // -------------------------------------------------
-startProcess(true);
+startProcess();
 
 // Lessons
 let lessons = [745, 920, 1135, 1415]; // Time of Lessons
@@ -50,6 +50,7 @@ function startProcess(process) {
                         PlanMorgen: subString(body, userClass)
                     }
                     console.log(plan);
+                    console.log("test")
                     // Read Plan; Make it to Email Content; Merge it with HTML File and then sent
                     if (weekday(plan.dayOfHeute) === date() || !process) {
                         for (let i = 0; i < unt.length; i++) {
@@ -240,7 +241,7 @@ function subString(body, userKlasse) {
     }
 }
 
-function time() {
+function noNeedTime() {
     var date = new Date();
     var hour = date.getHours();
     hour = (hour < 10 ? "0" : "") + hour;
