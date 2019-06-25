@@ -1,4 +1,4 @@
-# Unofficial IServ 3 API - Timetable Mailer
+# Unofficial IServ 3 API - Timetable Mailer (OUTDATED)
 
 This is the Unofficial IServ 3 API for the replacementplan module of IServ. It logs into your IServ Account and reads the replacementplan. Then it downloads the Website and Filters it for all the data you care. Daily at the time the plan gets updated an email gets fired to all the users. In addition to that an email gets fired at 18:00 for getting the up-to-date plan for the next Day. 
 
